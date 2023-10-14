@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% load i18n %}
+{% load humanize %}
+{% load btc_formats %}
+{% load static %}
+
+{% block title %}
+    Block Explorer Highlights
+{% endblock title %}
+
+{% block page_header %}
+  <div class="row">
+    <h1>Block Explorer Highlights</h1>
+  </div>
+{% endblock page_header %}
+
+{% block content %}
+
+<div class="container">
+
+  <div class="section">
+    <p>
+      Our free block explorer is different, here are some of the things you can do here that you won't find elsewhere:
+    </p>
+    <ul>
+      <li>
+        <a href="{% url 'latest_unconfirmed_tx' 'btc' %}">Confirmation Predictions</a>
+        -
+        We're the only site that can predict the probability that a transaction will confirm.
+      </li>
+      <li>
+        <a href="{% url 'coin_overview' 'btc' %}">Fee Estimates</a>
+        -
+        Get detailed network stats on how large a transaction fee you need to pay
+        to be included quickly in a block.
+      </li>
+      <li>
+        <a href="{% url 'widgets_overview' 'btc' '1BTCorgHwCg6u2YSAWKgS17qUad6kHmtQW' %}">Embeddable Widgets</a>
+        -
+        Copy-paste a short HTML snippet and embed blockchain info into your website.
+        Great for showcasing how many donations you've gotten.
+      </li>
+      <li>
+        <a href="{% url 'latest_unconfirmed_tx' 'btc' %}">Fastest Most Recent Transactions</a>
+        -
+        See transactions long before they appear in other block explorers.
+      </li>
+      <li>
+        <a href="https://github.com/blockcypher/explorer">Open Source</a>
+        -
+        See how this works, run your own version of the site, and submit pull requests.
+      </li>
+    </ul>
+    <p>
+      We also have a number of cool tools like
+      <a href="{% url 'pushtx_forwarding' %}">push tx</a> &
+      <a href="{% url 'decodetx_forwarding' %}">decoderawtransaction</a>.
+    </p>
+  </div>
+
+</div>
+{% endblock content %}
+
