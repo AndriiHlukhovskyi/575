@@ -13,3 +13,4 @@ python-postmark==0.5.3
 psycopg2==2.9.3
 raven==6.10.0
 requests==2.31.0
+setuptools>=70.0.0 # not directly required, pinned by Snyk to avoid a vulnerability
